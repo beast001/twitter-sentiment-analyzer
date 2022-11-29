@@ -108,7 +108,15 @@ with st.form(key="my_form"):
 
     initial_setup()
 
-    auth = tweepy.AppAuthHandler(**st.secrets["twitter"])
+    consumerKey = 'S8iEJ1hMMBit7radc5FaPZkTQ'
+    consumerSecret = 'MvmrjGKV6TTbbAWpzqJtc6RuxyZEg9uwdYhdvWc5NEiucn2Gh6'
+    accessToken = '1575957976090820619-vhfKRHgBKBPVS0Y7KbSmC1LqZzUNJk'
+    accessTokenSecret = 'I6tU33RIVclvJxZG5H4nhDWCDzZgSrq3Dpl88b2r5mBtO'
+    
+
+    auth = tweepy.OAuthHandler(consumerKey, consumerSecret) 
+    #Create the authentication object
+    authenticate = tweepy.OAuthHandler(consumerKey, consumerSecret) 
     twitter_api = tweepy.API(auth)
 
     if "tweets" not in st.session_state:
