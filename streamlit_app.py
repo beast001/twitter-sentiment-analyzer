@@ -13,7 +13,6 @@ import streamlit as st
 import time
 import tweepy
 
-st.set_page_config(page_icon="🐤", page_title="Twitter Sentiment Analyzer")
 
 st.write('<base target="_blank">', unsafe_allow_html=True)
 
@@ -359,7 +358,7 @@ with st.form(key="my_form"):
     search_params = {}
 
     a, b = st.columns([1, 1])
-    search_params["query_terms"] = a.text_input("Search term", "streamlit")
+    search_params["query_terms"] = a.text_input("Search term", "Amerix")
     search_params["limit"] = b.slider("Tweet limit", 1, 1000, 100)
 
     a, b, c, d = st.columns([1, 1, 1, 1])
