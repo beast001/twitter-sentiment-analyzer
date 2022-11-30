@@ -25,7 +25,7 @@ with a:
     st.text("")
     st.image("logoOfficial copy.png", width=50)
 with b:
-    st.title("Twitter Sentiment Analyzer")
+    st.title("Twitter Sentiment Analyzer by Data Sonic")
 
 url = "https://beast001-data-sonic-app-z5nmkq.streamlit.app/"
 st.write("Run our model today? [link](%s)" % url)
@@ -551,5 +551,12 @@ with st.expander("Show raw data", expanded=False):
     if st.checkbox("Show raw tweets"):
         for result in paginator(tweets, "curr_raw_tweet_page", 1):
             display_dict(result.__dict__)
+
+
+
+st.subheader(' ------------------------Created By :  Data Sonic Inc ---------------------- :sunglasses:')
+linkedin = "https://www.linkedin.com/in/africandatascientist/"
+st.write("Check us out today [link](%s)" % linkedin)
+                
 
 
