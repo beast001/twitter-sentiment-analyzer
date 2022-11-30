@@ -391,6 +391,8 @@ results = munge_the_numbers(tweets, tweets[0].created_at, tweets[-1].created_at)
 
 # --------------------------------------------------------------------------------------------------
 # Draw results
+df2 = pd.DataFrame([tweet.text for tweet in tweets], columns=['tweets'])
+st.write(df2)
 
 st.write("## Sentiment from the most recent ", len(tweets)," tweets")
 
@@ -538,4 +540,4 @@ with st.expander("Show raw data", expanded=False):
     if st.checkbox("Show raw tweets"):
         for result in paginator(tweets, "curr_raw_tweet_page", 1):
             display_dict(result.__dict__)
-            "---"
+
