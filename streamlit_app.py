@@ -14,6 +14,7 @@ import time
 import tweepy
 
 
+
 st.write('<base target="_blank">', unsafe_allow_html=True)
 
 prev_time = [time.time()]
@@ -25,6 +26,9 @@ with a:
     st.image("logoOfficial copy.png", width=50)
 with b:
     st.title("Twitter Sentiment Analyzer")
+
+url = "https://beast001-data-sonic-app-z5nmkq.streamlit.app/"
+st.write("Run our model today? [link](%s)" % url)
 
 st.write("Type in a term to view the latest Twitter sentiment on that term.")
 
@@ -392,7 +396,6 @@ results = munge_the_numbers(tweets, tweets[0].created_at, tweets[-1].created_at)
 # --------------------------------------------------------------------------------------------------
 # Draw results
 df2 = pd.DataFrame([clean_tweet_text(tweet.text).lower() for tweet in tweets], columns=['tweets'])
-
 
 # Create a function to clean the tweets
 
