@@ -27,7 +27,7 @@ with a:
 with b:
     st.title("Twitter Sentiment Analyzer by Data Sonic")
 
-url = "https://beast001-data-sonic-app-z5nmkq.streamlit.app/"
+url = "https://beast001-data-sonic-app-001v3i.streamlit.app/"
 st.write("Run our model today? [link](%s)" % url)
 
 st.write("Type in a term to view the latest Twitter sentiment on that term.")
